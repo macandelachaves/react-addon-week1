@@ -3,8 +3,8 @@ import axios from "axios";
 import Results from "./Results";
 
 export default function Dictionary() {
-  const [keywords, setKeywords] = useState("null");
-  const [results, setResults] = useState("null");
+  const [keywords, setKeywords] = useState("");
+  const [results, setResults] = useState(null);
 
   function handleResponse(response) {
     console.log(response.data[0]);

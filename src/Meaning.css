@@ -1,0 +1,10 @@
+.partOfSpeech {
+  font-weight: bold;
+  margin-top: 30px;
+  text-transform: capitalize;
+  color: #9771f4;
+}
+
+.definition {
+  font-style: italic;
+}
