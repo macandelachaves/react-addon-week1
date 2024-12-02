@@ -9,6 +9,15 @@ function App() {
         <img src={logo} className="App-logo mt-3" alt="logo" />
         <Dictionary />
       </header>
+      <footer>
+        This code was made with ♥️ by Candela.
+        <br />
+        <a href="https://github.com/macandelachaves/react-addon-week1">
+          🪄Github
+        </a>
+        <br />
+        <a href="https://can-dictionary.netlify.app/">🪄Netlify</a>
+      </footer>
     </div>
   );
 }
