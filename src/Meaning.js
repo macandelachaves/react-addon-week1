@@ -1,5 +1,6 @@
 import React from "react";
 import "./Meaning.css";
+
 export default function Meaning(props) {
   console.log(props.meaning);
   return (
@@ -8,7 +9,13 @@ export default function Meaning(props) {
       <div className="definitions">
         {props.meaning.definitions.map(function (definition, index) {
           if (index === 0) {
-            return <div key={index}> {definition.definition}</div>;
+            return (
+              <div key={index}>
+                {" "}
+                {definition.definition}
+                {definition.synonyms}
+              </div>
+            );
           } else {
             return null;
           }
