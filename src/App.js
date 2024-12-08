@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo mt-3" alt="logo" />
-        <Dictionary />
+        <Dictionary defaultKeyword="hello" />
       </header>
       <footer>
         This code was made with ♥️ by Candela.

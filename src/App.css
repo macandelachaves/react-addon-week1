@@ -1,3 +1,8 @@
+.App {
+  background-color: #f9f7fe;
+  padding: 30px;
+}
+
 .App-header {
   text-align: center;
 }
@@ -5,7 +10,7 @@
 .App-logo {
   max-width: 200px;
   display: block;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 footer {
