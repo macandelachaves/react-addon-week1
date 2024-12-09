@@ -36,10 +36,16 @@ export default function Dictionary(props) {
   if (loaded) {
     return (
       <div className="Dictionary">
-        <section>
+        <section className="form">
+          <h1>What word do you want to look up?</h1>
           <form onSubmit={handleSubmit}>
-            <input className="mt-4" type="search" onChange={handleOnChange} />
+            <input
+              type="search"
+              onChange={handleOnChange}
+              defaultValue="Search for a word"
+            />
           </form>
+          <div className="hint">i.e. paris, wine, yoga, coding</div>
         </section>
         <Results results={results} />
       </div>
