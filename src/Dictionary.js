@@ -8,14 +8,29 @@ export default function Dictionary(props) {
   const [results, setResults] = useState(null);
   const [loaded, setLoaded] = useState(false);
 
-  function handleResponse(response) {
+  function handleDictionaryResponse(response) {
     console.log(response.data[0]);
     setResults(response.data[0]);
   }
 
+  function handlePhotosResponse(response) {
+    console.log(response);
+  }
+
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keywords}`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleDictionaryResponse);
+
+    let photosApiKey =
+      "2pASalYqjcC6jJqoHIyiTA9uaC5ktGSzEPsSQiEUFYNGOiabSFCcCiY4";
+    let photosApiUrl = `https://api.pexels.com/v1/search?query=${keywords}&per_page=1`;
+
+    let headers = { Authorization: `Bearer ${photosApiKey}` };
+    axios
+      .get(photosApiUrl, {
+        headers: headers,
+      })
+      .then(handlePhotosResponse);
   }
 
   function handleSubmit(event) {
